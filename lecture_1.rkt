@@ -22,7 +22,9 @@
   
   (sqrt-iter 1.0 x))
 
-(sqrt 13)
+(sqrt 561)
+(sqrt 1105)
+
 
 
 
