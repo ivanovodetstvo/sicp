@@ -32,20 +32,20 @@
 
 
 ; b^n, b = b*b^n-1 , b^0=1
-; O(n), memory O(n)
+; 0(n), memory 0(n)
 (define (expt b n)
   (if (= n 0) 1
       (* b (expt b (- n 1)))))
 
 
-; O(n), memory O(1)
+; 0(n), memory 0(1)
 (define (expt-i b n)
   (define (expt-iter b counter prod)
     (if (= counter 0) prod
         (expt-iter b (- counter 1) (* prod b))))
   (expt-iter b n 1))
 
-; O(logn), memory O(logn)
+; 0(log n), memory 0(log n)
 (define (fast-expt b n)
   
   (define (square x)
